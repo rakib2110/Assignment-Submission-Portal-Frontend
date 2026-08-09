@@ -1,0 +1,14 @@
+﻿*.zip
+*.rar
+*.7z
+*.tar.gz
+node_modules/
+vendor/
+.idea/
+.vscode/
+.DS_Store
+.next/
+dist/
+build/
+venv/
+__pycache__/
