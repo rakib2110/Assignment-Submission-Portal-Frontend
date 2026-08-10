@@ -1,10 +1,9 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
-  withCredentials: true,
+  baseURL: "https://localhost:7243",
+  headers: { "Content-Type": "application/json" },
 });
-
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
@@ -15,7 +14,7 @@ api.interceptors.request.use(
   },
   (error) => {
     return Promise.reject(error);
-  }
+  },
 );
 
 api.interceptors.response.use(
@@ -26,7 +25,7 @@ api.interceptors.response.use(
       window.location = "/login";
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 export default api;
