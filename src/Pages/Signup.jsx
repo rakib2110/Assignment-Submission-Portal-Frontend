@@ -68,10 +68,22 @@ export default function Signup() {
             autoComplete="off"
           >
             <Form.Item
-              name="username"
-              rules={[{ required: true, message: 'Please input your username!' }]}
+              name="firstname"
+              rules={[{ required: true, message: 'Please input your first name!' }]}
             >
-              <Input type="text" placeholder="Username" className="w-full" />
+              <Input type="text" placeholder="Firstname" className="w-full" />
+            </Form.Item>
+            <Form.Item
+              name="lastname"
+              rules={[{ required: true, message: 'Please input your last name!' }]}
+            >
+              <Input type="text" placeholder="Lastname" className="w-full" />
+            </Form.Item>
+            <Form.Item
+              name="phonenumber"
+              rules={[{ required: true, message: 'Please input your phone number!' }]}
+            >
+              <Input type="text" placeholder="Phone Number" className="w-full" />
             </Form.Item>
             <Form.Item
               name="email"
